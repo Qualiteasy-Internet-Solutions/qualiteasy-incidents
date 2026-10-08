@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="ca">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#397b2b"><meta name="csrf-token" content="__CSRF__"><title>Avís de brigada · Alella</title><link rel="stylesheet" href="/style.css"></head>
+<body><main><header><img class="intake-logo" src="/qualiteasy-logo.png" alt="Qualiteasy"><div class="eyebrow">PROVA ALELLA</div><h1>Nou avís de brigada</h1><p>Explica què has vist. L’Ajuntament revisarà l’avís i decidirà l’actuació.</p><a class="header-link" href="/demo">← Torna al panell d’incidències</a></header>
+<form id="incident"><label for="what">Què passa?</label><textarea id="what" required minlength="5" maxlength="2000" rows="4" placeholder="Ex. Fanals apagats al carrer..."></textarea>
+<label for="where">On?</label><input id="where" required minlength="3" maxlength="200" autocomplete="off" placeholder="Carrer i número o punt de referència"><div id="suggestions" class="suggestions" hidden></div><button id="gps" class="secondary" type="button">📍 Usa la meva ubicació</button><p id="location-note" class="hint">Pots escriure l’adreça o fer servir la ubicació del mòbil.</p>
+<label for="photo">Foto</label><input id="photo" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" required><div id="preview"></div><button id="send" class="primary" type="submit">Enviar avís</button><p id="message" role="status" aria-live="polite"></p></form>
+<footer>Prototip amb dades de prova. L’Ajuntament completa la classificació, assignació i validació.</footer></main><script src="/app.js" defer></script></body></html>

@@ -1,0 +1,53 @@
+:root{--qe-blue:#1232ff;--qe-navy:#0e2030;--qe-lime:#b8d317;--qe-green:#397b2b;--qe-bg:#f0f4f9;--qe-border:#e4e9f2;--qe-muted:#697a8d}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;background:var(--qe-bg)!important;color:var(--qe-navy)!important}
+a,.btn--text{color:var(--qe-blue)}
+.btn--primary,.btn--success,.btn--action.js-submit{background:var(--qe-blue)!important;border-color:var(--qe-blue)!important;color:#fff!important;border-radius:9px!important}
+.btn--primary:hover,.btn--success:hover{background:#0b28d5!important}
+input:focus,textarea:focus,select:focus,.form-control:focus{border-color:var(--qe-blue)!important;box-shadow:0 0 0 3px #1232ff20!important}
+.navbar,.nav-sidebar,.main-header,.navigation{border-color:var(--qe-lime)}
+.page-header{border-bottom:3px solid var(--qe-lime)}
+.box,.ticketZoom,.dashboard .sidebar,.newTicket .box{border-radius:12px}
+/* Login: Qualiteasy heritage, GHX palette. */
+.login.fullscreen{min-height:100vh;background:radial-gradient(circle at 15% 10%,#294760 0,#0e2030 52%,#091623 100%)!important;display:flex;align-items:center;justify-content:center;padding:36px 20px;position:relative}
+.login.fullscreen:before{content:"";position:fixed;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,var(--qe-lime),#21fab3,var(--qe-blue));z-index:2}
+.login .fullscreen-center{width:min(960px,100%);display:flex;align-items:stretch;justify-content:center;gap:0;min-height:520px;filter:drop-shadow(0 24px 55px #020c1790)}
+.login .fullscreen-body{width:min(450px,100%);max-width:none;background:#fff;border-radius:0 22px 22px 0;padding:48px 46px;display:flex;flex-direction:column;justify-content:center}
+.login .fullscreen-body>p:first-child,.login .js-footer{display:none!important}
+.login .hero-unit{background:#fff!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important}
+.login .company-logo{display:none!important}
+.login label{font-size:12px!important;font-weight:700!important;letter-spacing:.02em;color:var(--qe-navy)!important;text-transform:none!important}
+.login .form-control{background:#fff!important;color:var(--qe-navy)!important;border:1.5px solid var(--qe-border)!important;border-radius:10px!important;min-height:46px}
+.login .form-controls .btn--primary{height:47px;font-size:15px;font-weight:700}
+.login .form-controls .btn--text{font-size:12px}
+.login .poweredBy{color:#a8b9c7!important;opacity:.75;bottom:10px}
+.qe-login-brand{width:min(460px,50%);background:linear-gradient(145deg,#102c43 0%,#0e2030 68%,#102831 100%);color:white;border-radius:22px 0 0 22px;padding:48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.qe-login-brand:after{content:"";position:absolute;left:-40%;right:-30%;bottom:28%;height:3px;background:var(--qe-lime);transform:rotate(-14deg);box-shadow:0 0 24px 9px #b8d31750}
+.qe-login-logo{font-size:28px;letter-spacing:.01em;font-weight:700}.qe-login-logo span{color:var(--qe-lime)}
+.qe-login-eyebrow{font-size:11px;color:var(--qe-lime);font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.qe-login-brand h1{font-size:39px;line-height:1.1;letter-spacing:-.04em;margin:18px 0 14px;color:#fff}
+.qe-login-brand p{color:#b9cad4;font-size:15px;line-height:1.55;max-width:300px}
+.qe-login-brand small{color:#96adb8;font-size:12px}
+.qe-login-form-title{font-size:27px;font-weight:800;color:var(--qe-navy);margin:0 0 6px}.qe-login-form-intro{color:var(--qe-muted);font-size:13px;margin:0 0 30px}
+/* Dashboard dedicated to municipal incidence work. */
+.qe-dashboard{width:100%;padding:30px 34px 25px}.qe-dashboard h1{font-size:29px;color:var(--qe-navy);margin:5px 0 4px}.qe-dashboard p{color:var(--qe-muted);margin:0 0 22px}
+.qe-dashboard .qe-kpis{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:13px}.qe-kpi{border:1px solid var(--qe-border);border-top:4px solid var(--qe-lime);border-radius:12px;background:#fff;padding:19px;box-shadow:0 3px 12px #0e20300b}.qe-kpi b{display:block;font-size:30px;color:var(--qe-navy);margin:8px 0}.qe-kpi span{color:var(--qe-muted);font-size:12px;font-weight:700}.qe-kpi a{font-size:12px;font-weight:700;text-decoration:none}
+.qe-dashboard-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}.qe-action{display:inline-flex;padding:11px 15px;border-radius:9px;background:var(--qe-blue);color:#fff!important;text-decoration:none;font-weight:700;font-size:13px}.qe-action.secondary{background:#e8edff;color:var(--qe-blue)!important}
+.qe-dashboard .qe-note{font-size:12px;margin:16px 0 0;color:var(--qe-muted)}
+.dashboard.main>.tabs,.dashboard.main>.tab-content{display:none!important}.dashboard.main{display:block!important}.dashboard~.sidebar.optional{display:none!important}
+/* Native incident detail: large photo and visible map. */
+.qe-evidence{margin:0 20px 22px;padding:18px;background:#fff;border:1px solid var(--qe-border);border-radius:12px;box-shadow:0 4px 18px #0e20300d}.qe-evidence h2{font-size:17px;margin:0 0 12px;color:var(--qe-navy)}.qe-evidence .qe-caption{font-size:12px;color:var(--qe-muted);margin:6px 0 14px}.qe-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.qe-photos button{padding:0;border:0;background:none;cursor:zoom-in;position:relative}.qe-photos img{width:100%;height:245px;object-fit:cover;border-radius:9px;border:1px solid var(--qe-border)}.qe-photos small{display:block;text-align:left;margin-top:5px;color:var(--qe-muted)}.qe-photo-dialog{max-width:95vw;max-height:95vh;border:0;border-radius:12px;padding:12px;background:var(--qe-navy);color:#fff}.qe-photo-dialog::backdrop{background:#07111ccc}.qe-photo-dialog img{max-width:90vw;max-height:82vh;object-fit:contain}.qe-photo-dialog button{display:block;margin:0 0 8px auto;background:#fff;color:var(--qe-navy);border:0;border-radius:6px;padding:6px 10px;cursor:pointer}.qe-map{height:260px;position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--qe-border);background:#dce7df}.qe-map img{position:absolute;width:256px;height:256px;max-width:none}.qe-map-pin{position:absolute;left:50%;top:50%;width:21px;height:21px;border-radius:50%;border:4px solid #fff;background:var(--qe-blue);box-shadow:0 2px 8px #0008;transform:translate(-50%,-50%);z-index:2}.qe-map-credit{position:absolute;bottom:4px;right:4px;background:#fffd;padding:2px 5px;font-size:10px;z-index:3}
+/* One municipal intake path. */
+.newTicket .type-tabs{display:none!important}.newTicket .page-header h1{font-size:24px}.newTicket .page-content{padding-top:22px}
+@media(max-width:900px){.qe-dashboard .qe-kpis{grid-template-columns:repeat(2,minmax(120px,1fr))}.qe-login-brand{display:none}.login .fullscreen-body{border-radius:20px}.login .fullscreen-center{min-height:0;max-width:450px}}
+@media(max-width:560px){.login .fullscreen-body{padding:34px 24px}.qe-dashboard{padding:20px 16px}.qe-evidence{margin:0 8px 16px}.qe-photos img{height:220px}}
+.login .fullscreen-body,.login .fullscreen-body .hero-unit,.login .fullscreen-body form,.login .fullscreen-body .form-group,.login .fullscreen-body .form-controls{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+.login .fullscreen-body .form-control{width:100%!important;box-sizing:border-box!important}
+.login .fullscreen-body .qe-login-form-intro{text-align:left;margin:0 0 26px}
+.qe-login-wordmark{display:flex;align-items:center;justify-content:flex-start;width:260px;max-width:100%;min-height:76px;background:#fff;border-radius:11px;padding:10px 13px;box-shadow:0 8px 24px #0002}
+.qe-login-wordmark img{display:block;width:100%;height:auto;object-fit:contain}
+.navigation .search .logo{width:45px!important;height:45px!important;margin:4px 8px 0 8px!important;border-radius:8px;background:#fff url('/assets/qualiteasy/qualiteasy-logo.png') left center / auto 45px no-repeat!important;box-shadow:0 2px 7px #0002}
+.navigation .search .logo .icon-logo{visibility:hidden!important}
+.navigation .search .logo .activity-counter{right:-5px;bottom:-2px}
+.poweredBy{display:none!important}
+.qe-login-brand:after{bottom:18%;opacity:.72;z-index:0}
+.qe-login-brand>*{position:relative;z-index:1}

@@ -1,0 +1,8 @@
+.env
+.zammad-api-token
+.demo-share-password
+docker-compose.override.yml
+mobile-intake/demo-workflow.sqlite3*
+__pycache__/
+*.pyc
+.DS_Store
