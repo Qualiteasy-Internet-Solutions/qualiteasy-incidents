@@ -5,7 +5,7 @@
 - Una instal·lació GLPI 11.0.9 amb MariaDB 11.8.
 - Dues entitats filles de l'arrel: `Alella · prova` i `Client B · prova`.
 - Usuaris ficticis d'operari i gestor municipal vinculats a l'entitat corresponent. Es va retirar el permís recursiu de Self-Service a l'entitat arrel que apareixia en crear usuaris per CLI.
-- Dos tiquets ficticis independents, un per entitat. Cap registre ni fotografia real d'Alella no es va importar.
+- Dos tiquets ficticis inicials independents, un per entitat, i més tard tres casos ficticis oberts en fases diferents a l’entitat del pilot municipal. Cap registre ni fotografia real de client no es va importar.
 
 ## Observacions verificades
 
@@ -17,6 +17,12 @@
 | Operari registra una solució | El tiquet passa a resolt i la solució queda pendent d'aprovació. |
 | Ajuntament accepta la solució per `/Ticket/{id}` amb `_accepted=1` | El tiquet passa a tancat i queda registrada la persona que valida. |
 | Operari amb perfil Technician estàndard envia directament `status=6` | **Ha pogut tancar el tiquet**. Cal un perfil Brigada amb matriu de cicle de vida restringida i repetir la prova. |
+
+### Visibilitat de la safata local
+
+Els dos primers casos del pilot municipal es van tancar durant les proves d’API i no destacaven al filtre habitual de feina oberta. El 8 d’octubre es van afegir tres casos estrictament ficticis: `#4` nou/pendent de revisió, `#5` en execució i `#6` resolt amb una solució pendent d’aprovació. L’API confirma que tant l’usuari municipal com l’operari de prova veuen els tres. A la UI cal seleccionar l’entitat del pilot i obrir **Assistència/Assistance → Tiquets/Tickets**.
+
+Els dos usuaris continuen amb el mateix perfil `Technician`: la prova mostra visibilitat per entitat, però encara **no** separació real de les facultats de recepció, execució i tancament. La UI conserva menús d’inventari i funcions alienes al flux municipal. La configuració de les entitats, usuaris i aquests casos roman al volum Docker local, no en aquesta branca Git.
 
 Actualitzar només l'estat de la solució no tanca correctament el tiquet ni registra l'aprovador. La integració ha de seguir el flux del tiquet.
 

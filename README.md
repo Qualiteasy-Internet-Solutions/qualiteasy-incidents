@@ -8,7 +8,7 @@ Aquesta branca recull la prova local de GLPI 11 com a possible base de la gesti�
 2. Executa `docker compose up -d`. La UI s'exposa només a `http://127.0.0.1:8090`.
 3. Completa la instal·lació inicial, canvia els comptes per defecte i crea les entitats i usuaris de prova indicats a [PROVA_MULTIENTITAT.md](PROVA_MULTIENTITAT.md).
 
-La configuració operativa de la prova original viu al volum Docker local, no a la branca Git. Per repetir-la en una altra màquina s'han de recrear les entitats, els perfils i els casos de prova. Aquest és el treball pendent per convertir-la en una prova automatitzada.
+La configuració operativa i els casos ficticis visibles de la prova original viuen al volum Docker local, no a la branca Git. Per repetir-la en una altra màquina s'han de recrear les entitats, els perfils i els casos de prova. Aquest és el treball pendent per convertir-la en una prova automatitzada.
 
 ## Estat de la decisió
 
