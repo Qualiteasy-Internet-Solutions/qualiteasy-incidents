@@ -17,11 +17,25 @@ if compiled == template:
 with tempfile.NamedTemporaryFile(mode="w", suffix=".scss") as tmp:
     tmp.write(compiled)
     tmp.flush()
+    # Docker Compose conserva els permisos del fitxer d'origen. Si queda a
+    # 0600, www-data no pot llegir la paleta i tota la UI respon amb 500.
+    Path(tmp.name).chmod(0o644)
     subprocess.run(
         ["docker", "compose", "cp", tmp.name, "glpi:/var/glpi/files/_themes/qualiteasy.scss"],
         cwd=ROOT,
         check=True,
     )
+
+subprocess.run(
+    ["docker", "compose", "exec", "-T", "-u", "root", "glpi", "chmod", "644", "/var/glpi/files/_themes/qualiteasy.scss"],
+    cwd=ROOT,
+    check=True,
+)
+subprocess.run(
+    ["docker", "compose", "exec", "-T", "glpi", "sh", "-c", "test -r /var/glpi/files/_themes/qualiteasy.scss"],
+    cwd=ROOT,
+    check=True,
+)
 
 subprocess.run(
     ["docker", "compose", "exec", "-T", "glpi", "php", "bin/console", "cache:clear", "--no-interaction"],
