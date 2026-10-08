@@ -1,0 +1,6 @@
+.env
+.glpi-admin-password
+.demo-users.json
+*.sql
+*.dump
+.DS_Store

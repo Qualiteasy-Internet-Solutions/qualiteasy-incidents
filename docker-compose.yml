@@ -1,0 +1,39 @@
+name: qualiteasy-glpi-poc
+services:
+  db:
+    image: mariadb:11.8
+    restart: 'no'
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: 'yes'
+      MARIADB_DATABASE: glpi
+      MARIADB_USER: glpi
+      MARIADB_PASSWORD: ${GLPI_DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "healthcheck.sh --connect --innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+    mem_limit: 768m
+  glpi:
+    image: glpi/glpi:11.0.9
+    restart: 'no'
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      GLPI_DB_HOST: db
+      GLPI_DB_PORT: '3306'
+      GLPI_DB_NAME: glpi
+      GLPI_DB_USER: glpi
+      GLPI_DB_PASSWORD: ${GLPI_DB_PASSWORD}
+      GLPI_SKIP_AUTOUPDATE: 'true'
+    ports:
+      - '127.0.0.1:8090:80'
+    volumes:
+      - glpi_data:/var/glpi
+    mem_limit: 1536m
+volumes:
+  db_data:
+  glpi_data:
