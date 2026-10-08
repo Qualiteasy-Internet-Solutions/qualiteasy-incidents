@@ -22,7 +22,13 @@
 
 Els dos primers casos del pilot municipal es van tancar durant les proves d’API i no destacaven al filtre habitual de feina oberta. El 8 d’octubre es van afegir tres casos estrictament ficticis: `#4` nou/pendent de revisió, `#5` en execució i `#6` resolt amb una solució pendent d’aprovació. L’API confirma que tant l’usuari municipal com l’operari de prova veuen els tres. A la UI cal seleccionar l’entitat del pilot i obrir **Assistència/Assistance → Tiquets/Tickets**.
 
-Els dos usuaris continuen amb el mateix perfil `Technician`: la prova mostra visibilitat per entitat, però encara **no** separació real de les facultats de recepció, execució i tancament. La UI conserva menús d’inventari i funcions alienes al flux municipal. La configuració de les entitats, usuaris i aquests casos roman al volum Docker local, no en aquesta branca Git.
+El 8 d’octubre, es va assignar a l’usuari municipal fictici el perfil local `Qualiteasy Municipal · prova visual`, que conserva només drets d’incidències, seguiments, tasques i validació. La barra lateral va passar de sis seccions principals a **Suport** i **Eines** (només «Cerques desades»). L’operari continua amb `Technician`: la prova encara **no** separa les facultats reals de recepció, execució i tancament. La configuració dels perfils i casos roman al volum Docker local, no en aquesta branca Git.
+
+### Comparació de l’aspecte
+
+S’ha instal·lat la [paleta personalitzada nativa de GLPI 11](https://help.glpi-project.org/documentation/advanced/custom_palettes), amb colors Qualiteasy i el logotip oficial a la barra lateral mitjançant CSS. Això es pot repetir amb `python3 theme/install.py` i no exigeix reconstruir Docker. La prova al navegador confirma `data-glpi-theme="qualiteasy"` i el logotip visible. La pantalla continua essent la vista estàndard de GLPI: taules i pestanyes genèriques, «Tiquets», una capçalera i login de GLPI, sense el panell fotogràfic, mapa o accions per rol de la demo Zammad. Els perfils redueixen mòduls sobrants, però no creen aquesta experiència per si sols.
+
+El [plugin oficial Branding](https://help.glpi-project.org/faq/plugins/branding) cobreix logo, favicon i login, però per a GLPI autohosted demana la subscripció Basic. El CSS de la paleta és una alternativa limitada per a la barra lateral i pot necessitar ajustos amb noves versions. El [quadre de comandament natiu](https://help.glpi-project.org/faq/glpi/dashboard) es pot personalitzar amb widgets; cal provar si n’hi ha prou per al circuit municipal abans de prometre equivalència visual.
 
 Actualitzar només l'estat de la solució no tanca correctament el tiquet ni registra l'aprovador. La integració ha de seguir el flux del tiquet.
 

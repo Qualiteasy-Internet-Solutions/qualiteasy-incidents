@@ -1,0 +1,27 @@
+/* theme-name: Qualiteasy */
+/* Paleta de prova per a GLPI 11. No modifica cap fitxer del nucli. */
+:root[data-glpi-theme="qualiteasy"] {
+    --tblr-primary-rgb: 57, 123, 43;
+    --tblr-secondary: #647064;
+    --tblr-secondary-fg: #ffffff;
+    --tblr-link-color-rgb: 57, 123, 43;
+    --glpi-mainmenu-bg: #1d201b;
+    --glpi-mainmenu-fg: #f4f6f1;
+    --glpi-helpdesk-header: #eef4e8;
+    --glpi-palette-color-1: #1d201b;
+    --glpi-palette-color-2: #397b2b;
+    --glpi-palette-color-3: #b8d317;
+    --glpi-palette-color-4: #f4f6f1;
+    --glpi-illustrations-gradient-1: #f4f6f1;
+    --glpi-illustrations-gradient-2: #e0eacb;
+    --glpi-illustrations-gradient-3: #b8d317;
+}
+
+/* Prova visual: el logotip oficial a la barra lateral. */
+:root[data-glpi-theme="qualiteasy"] .sidebar .glpi-logo {
+    width: 180px;
+    height: 54px;
+    background: #ffffff url("__QUALITEASY_LOGO_URI__") center / contain no-repeat !important;
+    border-radius: 6px;
+}
+:root[data-glpi-theme="qualiteasy"] .sidebar { border-top: 4px solid #b8d317; }
