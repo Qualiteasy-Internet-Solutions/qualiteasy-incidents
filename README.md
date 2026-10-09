@@ -1,3 +1,5 @@
+> **La demo s’ha mogut** a https://qualiteasy-internet-solutions.github.io/qualiteasy-demos/incidents/ (repositori `qualiteasy-demos`). Aquesta adreça hi redirigeix i aquesta branca ja no es manté.
+
 # Gestor d'incidències Qualiteasy · demo estàtica
 
 Prototip interactiu per revisar el recorregut d'una incidència: alta simple d'operari o alta administrativa, revisió, assignació, execució, pretancament amb fotografia, validació o retorn, ordre de treball imprimible i possible derivació excepcional a una no conformitat.
