@@ -8,6 +8,6 @@ Repositori d'exploració per a la nova gestió d'incidències de Qualiteasy. Sep
 | [`poc-zammad`](https://github.com/Qualiteasy-Internet-Solutions/qualiteasy-incidents/tree/poc-zammad) | Prototip local sobre Zammad i capa de flux Qualiteasy. |
 | [`poc-glpi`](https://github.com/Qualiteasy-Internet-Solutions/qualiteasy-incidents/tree/poc-glpi) | Prova de GLPI amb entitats separades i anàlisi multiclient. |
 
-**[Obre la demo pública](https://qualiteasy-internet-solutions.github.io/qualiteasy-incidents/)**
+**La demo s’ha mogut a [qualiteasy-demos/incidents](https://qualiteasy-internet-solutions.github.io/qualiteasy-demos/incidents/)**; l’adreça antiga hi redirigeix.
 
-Les branques de prova exclouen tokens, contrasenyes, bases de dades i volums Docker. La decisió de motor d'incidències continua oberta.
+Les branques de prova exclouen tokens, contrasenyes, bases de dades i volums Docker. Decisió (9 d’octubre de 2026): el gestor d’incidències serà un mòdul propi del nou Qualiteasy. Les proves de Zammad i GLPI queden arxivades en aquest repositori com a referència.
